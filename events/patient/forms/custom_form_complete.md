@@ -17,13 +17,13 @@ dataLayer.push({
   event: 'custom_form_complete',
   event_data: {
     form_name: "<form_name>", // REQUIRED | string | Name of the form, e.g., "Digital Enrollment Form"
-    eligibility_outcome: "<eligibility_outcome>", // REQUIRED | string | Outcome of eligibility check, e.g., "Not eligible"
-    support_program_options: "<support_program_options>", // REQUIRED | string | Options chosen for support programs, e.g., "dedicatedGuide"
+    eligibility_outcome: "<eligibility_outcome>", // contextual | string | Outcome of eligibility check, e.g., "Not eligible"
+    support_program_options: "<support_program_options>", // contextual | string | Options chosen for support programs, e.g., "dedicatedGuide"
     brand: "<brand>", // REQUIRED | string | Prescription drug familiar to the patient, e.g., "darzalex"
     person: "<person>", // REQUIRED | string | Persona of the user, e.g., "patient" or "caregiver"
-    prescription_status: "<prescription_status>", // REQUIRED | string | Prescription status, e.g., "currently prescribed darzalex"
-    condition: "<condition>", // REQUIRED | string | Medical condition, e.g., "Moderate to Severe Plaque Psoriasis"
-    pathway: "<pathway>" // REQUIRED | string | Pathway used, e.g., "dedicatedGuide"
+    prescription_status: "<prescription_status>", // contextual | string | Prescription status, e.g., "currently prescribed darzalex"
+    condition: "<condition>", // contextual | string | Medical condition, e.g., "Moderate to Severe Plaque Psoriasis"
+    pathway: "<pathway>" // contextual | string | Pathway used, e.g., "dedicatedGuide"
   }
 });
 
@@ -31,14 +31,14 @@ dataLayer.push({
 
 ## Variable Definitions
 
-| Field                  | Type    | Required | Description                                                | Example                                    | Pattern | Min Length | Max Length | Minimum | Maximum | Multiple Of |
-|------------------------|---------|----------|------------------------------------------------------------|--------------------------------------------|---------|------------|------------|---------|---------|-------------|
-| form_name              | string  | required | Used with the "form_complete" or "form_error" events. Returns the form name.| "Digital Enrollment Form" |         |            |            |         |         |             |
-| eligibility_outcome    | string  | required | Indicates if the user is eligible or not for the program    | "Not eligible"                            |         |            |            |         |         |             |
-| support_program_options| string  | required | Support program options selected by the user                | "dedicatedGuide"                          |         |            |            |         |         |             |
-| brand                  | string  | required | Prescription drug familiar to the patient                   | "darzalex"                                |         |            |            |         |         |             |
-| person                 | string  | required | Persona of the user, e.g., "patient" or "caregiver"         | "patient"                                 |         |            |            |         |         |             |
-| prescription_status    | string  | required | Indicates whether the user is currently prescribed          | "currently prescribed darzalex"           |         |            |            |         |         |             |
-| condition              | string  | required | Medical condition for which the user seeks assistance       | "Moderate to Severe Plaque Psoriasis"     |         |            |            |         |         |             |
-| pathway                | string  | required | Pathway used in the program, e.g., "Full Program", "Guide Only"| "dedicatedGuide"                       |         |            |            |         |         |             |
+| Field                  | Type    | Required   | Description                                                                 | Example                                   | Pattern | Min Length | Max Length | Minimum | Maximum | Multiple Of |
+|------------------------|---------|------------|-----------------------------------------------------------------------------|-------------------------------------------|---------|------------|------------|---------|---------|-------------|
+| form_name              | string  | required   | Used with the "form_complete" or "form_error" events. Returns the form name.| "Digital Enrollment Form"                 |         |            |            |         |         |             |
+| eligibility_outcome    | string  | contextual | Indicates if the user is eligible or not for the program                    | "Not eligible"                            |         |            |            |         |         |             |
+| support_program_options| string  | contextual | Support program options selected by the user                                | "dedicatedGuide"                          |         |            |            |         |         |             |
+| brand                  | string  | required   | Prescription drug familiar to the patient                                   | "darzalex"                                |         |            |            |         |         |             |
+| person                 | string  | required   | Persona of the user, e.g., "patient" or "caregiver"                         | "patient"                                 |         |            |            |         |         |             |
+| prescription_status    | string  | contextual | Indicates whether the user is currently prescribed                          | "currently prescribed darzalex"           |         |            |            |         |         |             |
+| condition              | string  | contextual | Medical condition for which the user seeks assistance                       | "Moderate to Severe Plaque Psoriasis"     |         |            |            |         |         |             |
+| pathway                | string  | contextual | Pathway used in the program, e.g., "Full Program", "Guide Only"             | "dedicatedGuide"                          |         |            |            |         |         |             |
 
