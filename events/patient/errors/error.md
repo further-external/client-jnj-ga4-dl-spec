@@ -17,15 +17,14 @@ dataLayer.push({
   event: 'error',
   event_data: {
     error_message: '<error_message>', // REQUIRED | string | ex. Phone number should follow the format (xxx) xxx-xxxx, Must be a valid email address
-    error_type: '<error_type>' // recommended | string | ex. form_field_validation, server_error	
+    error_type: '<error_type>' // REQUIRED | string | ex. form_field_validation, server_error	
   }
 });
 ```
 
 ## Variable Definitions
 
-|Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|error_message|string|required|The specific error that occurred. If an error message is shown to the user, this should be populated with that text.|Phone number should follow the format (xxx) xxx-xxxx, Must be a valid email address|
-|error_type|string|recommended|Differentiates between a frontend or backend error|form_field_validation, server_error|
-
+| Field          | Type   | Required | Description                                                                                   | Example                                                                | Pattern | Min Length | Max Length | Minimum | Maximum | Multiple Of |
+|----------------|--------|---------|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------|---------|------------|------------|---------|---------|-------------|
+| error_message  | string | required | The specific error that occurred. If an error message is shown to the user, this should be populated with that text. | Phone number should follow the format (xxx) xxx-xxxx, Must be a valid email address |         |            |            |         |         |             |
+| error_type     | string | required | Differentiates between a frontend or backend error                                            | form_field_validation, server_error                                    |         |            |            |         |         |             |
