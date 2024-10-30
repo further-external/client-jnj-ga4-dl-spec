@@ -16,22 +16,22 @@ dataLayer.push({
     element_name: "<element_name>", // REQUIRED | string | ex. "Header"
     brand: "<brand>", // REQUIRED | string | ex. "darzalex"
     person: "<person>", // REQUIRED | string | ex. "patient"
-    prescription_status: "<prescription_status>", // REQUIRED | string | ex. "not prescribed darzalex"
-    condition: "<condition>", // REQUIRED | string | ex. "Active Psoriatic Arthritis"
-    pathway: "<pathway>" // REQUIRED | string | ex. "personalSupport"
+    prescription_status: "<prescription_status>", // contextual | string | ex. "not prescribed darzalex"
+    condition: "<condition>", // contextual | string | ex. "Active Psoriatic Arthritis"
+    pathway: "<pathway>" // contextual | string | ex. "personalSupport"
   }
 });
 ```
 
 ## Variable Definitions
 
-| Field               | Type    | Required | Description                                                        | Example                       | Pattern | Min Length | Max Length | Minimum | Maximum | Multiple Of |
-|---------------------|---------|----------|--------------------------------------------------------------------|-------------------------------|---------|------------|------------|---------|---------|-------------|
-| link_url            | string  | required | The HREF of the link interacted with                               | "undefined"                   |         |            |            |         |         |             |
-| link_text           | string  | required | The text of the link interacted with                               | "Sign In"                     |         |            |            |         |         |             |
-| element_name        | string  | required | Name of the site element a user interacted with                    | "Header"                      |         |            |            |         |         |             |
-| brand               | string  | required | Prescription drug familiar to the patient                          | "darzalex"                    |         |            |            |         |         |             |
-| person              | string  | required | Persona of the user, e.g., patient or caregiver                    | "patient"                     |         |            |            |         |         |             |
-| prescription_status | string  | required | Current prescription status                                        | "not prescribed darzalex"     |         |            |            |         |         |             |
-| condition           | string  | required | Medical condition the patient seeks help with                      | "Active Psoriatic Arthritis"  |         |            |            |         |         |             |
-| pathway             | string  | required | Program pathway, e.g., Full Program, Cost Support Only, Guide Only | "personalSupport"             |         |            |            |         |         |             |
+| Field               | Type    | Required   | Description                                                        | Example                       | Pattern | Min Length | Max Length | Minimum | Maximum | Multiple Of |
+|---------------------|---------|------------|--------------------------------------------------------------------|-------------------------------|---------|------------|------------|---------|---------|-------------|
+| link_url            | string  | required   | The HREF of the link interacted with                               | "undefined"                   |         |            |            |         |         |             |
+| link_text           | string  | required   | The text of the link interacted with                               | "Sign In"                     |         |            |            |         |         |             |
+| element_name        | string  | required   | Name of the site element a user interacted with                    | "Header"                      |         |            |            |         |         |             |
+| brand               | string  | required   | Prescription drug familiar to the patient                          | "darzalex"                    |         |            |            |         |         |             |
+| person              | string  | required   | Persona of the user, e.g., patient or caregiver                    | "patient"                     |         |            |            |         |         |             |
+| prescription_status | string  | contextual | Current prescription status                                        | "not prescribed darzalex"     |         |            |            |         |         |             |
+| condition           | string  | contextual | Medical condition the patient seeks help with                      | "Active Psoriatic Arthritis"  |         |            |            |         |         |             |
+| pathway             | string  | contextual | Program pathway, e.g., Full Program, Cost Support Only, Guide Only | "personalSupport"             |         |            |            |         |         |             |
