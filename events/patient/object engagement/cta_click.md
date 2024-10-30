@@ -11,31 +11,31 @@ dataLayer.push({ event_data: null });  // Clear the previous event_data object.
 dataLayer.push({
   event: 'cta_click',
   event_data: {
-    step_name: "<step_name>", // REQUIRED | string | ex. "Support Personalization"
-    step_number: "<step_number>", // REQUIRED | integer | ex. 1
-    link_url: "<link_url>", // REQUIRED | string | ex. "undefined"
-    link_text: "<link_text>", // REQUIRED | string | ex. "Learn More"
+    step_name: "<step_name>", // contextual | string | ex. "Support Personalization"
+    step_number: "<step_number>", // contextual | integer | ex. 1
+    link_url: "<link_url>", // contextual | string | ex. "undefined"
+    link_text: "<link_text>", // contextual | string | ex. "Sign In"
     module_name: "<module_name>", // REQUIRED | string | ex. "Product Information"
     brand: "<brand>", // REQUIRED | string | ex. "darzalex"
     person: "<person>", // REQUIRED | string | ex. "patient"
-    prescription_status: "<prescription_status>", // REQUIRED | string | ex. "currently prescribed darzalex"
-    condition: "<condition>", // REQUIRED | string | ex. "Moderate to Severe Plaque Psoriasis"
-    pathway: "<pathway>" // REQUIRED | string | ex. "dedicatedGuide"
+    prescription_status: "<prescription_status>", // contextual | string | ex. "not prescribed darzalex"
+    condition: "<condition>", // contextual | string | ex. "Active Psoriatic Arthritis"
+    pathway: "<pathway>" // contextual | string | ex. "personalSupport"
   }
 });
 ```
 
 ## Variable Definitions
 
-| Field               | Type    | Required | Description                                               | Example                               | Pattern | Min Length | Max Length | Minimum | Maximum | Multiple Of |
-|---------------------|---------|----------|-----------------------------------------------------------|---------------------------------------|---------|------------|------------|---------|---------|-------------|
-| step_name           | string  | required | The name of the step users are interacting with           | "Support Personalization"             |         |            |            |         |         |             |
-| step_number         | integer | required | Step number in a predefined form flow                     | 1, 2, 3                               |         |            |            |         |         |             |
-| link_url            | string  | required | The HREF of the link interacted with                      | "undefined"                           |         |            |            |         |         |             |
-| link_text           | string  | required | The text of the link interacted with                      | "Learn More"                          |         |            |            |         |         |             |
-| module_name         | string  | required | Name of content module on the site                        | "Product Information"                 |         |            |            |         |         |             |
-| brand               | string  | required | Prescription drug familiar to the patient                 | "darzalex"                            |         |            |            |         |         |             |
-| person              | string  | required | Persona of the user, e.g., patient or caregiver           | "patient"                             |         |            |            |         |         |             |
-| prescription_status | string  | required | Current prescription status                               | "currently prescribed darzalex"       |         |            |            |         |         |             |
-| condition           | string  | required | Medical condition the patient seeks help with             | "Moderate to Severe Plaque Psoriasis" |         |            |            |         |         |             |
-| pathway             | string  | required | Program pathway, e.g., Full Program, Cost Support Only    | "dedicatedGuide"                      |         |            |            |         |         |             |
+| Field               | Type    | Required   | Description                                               | Example                               | Pattern | Min Length | Max Length | Minimum | Maximum | Multiple Of |
+|---------------------|---------|------------|-----------------------------------------------------------|---------------------------------------|---------|------------|------------|---------|---------|-------------|
+| step_name           | string  | contextual | The name of the step users are interacting with           | "Support Personalization"             |         |            |            |         |         |             |
+| step_number         | integer | contextual | Step number in a predefined form flow                     | 1, 2, 3                               |         |            |            |         |         |             |
+| link_url            | string  | contextual | The HREF of the link interacted with                               | "undefined"                   |         |            |            |         |         |             |
+| link_text           | string  | contextual | The text of the link interacted with                               | "Sign In"                     |         |            |            |         |         |             |
+| module_name         | string  | required   | Name of content module on the site                        | "Product Information"                 |         |            |            |         |         |             |
+| brand               | string  | required   | Prescription drug familiar to the patient                          | "darzalex"                    |         |            |            |         |         |             |
+| person              | string  | required   | Persona of the user, e.g., patient or caregiver                    | "patient"                     |         |            |            |         |         |             |
+| prescription_status | string  | contextual | Current prescription status                                        | "not prescribed darzalex"     |         |            |            |         |         |             |
+| condition           | string  | contextual | Medical condition the patient seeks help with                      | "Active Psoriatic Arthritis"  |         |            |            |         |         |             |
+| pathway             | string  | contextual | Program pathway, e.g., Full Program, Cost Support Only, Guide Only | "personalSupport"             |         |            |            |         |         |             |
