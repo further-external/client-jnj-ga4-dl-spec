@@ -15,7 +15,7 @@ dataLayer.push({ event_data: null });  // Clear the previous event_data object.
 dataLayer.push({
   event: "file_download",
   event_data: {
-    file_extension: "<file_extension>", // recommended | string | ex. pdf
+    file_extension: "<file_extension>", // REQUIRED | string | ex. pdf
     link_url: "<link_url>", // REQUIRED | string | ex. https://www.example.com/form
     link_text: "<link_text>", // REQUIRED | string | ex. download pdf
     
@@ -25,9 +25,8 @@ dataLayer.push({
 
 ## Variable Definitions
 
-|Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|file_extension|string|recommended|The file extension of the file being downloaded.|pdf|
-|link_text|string|required|The full text of the link.|click here|
-|link_url|string|required|The full URL of the link.|https://www.example.com/form|
-
+| Field          | Type   | Required | Description                                      | Example                        | Pattern | Min Length | Max Length | Minimum | Maximum | Multiple Of |
+|----------------|--------|----------|--------------------------------------------------|--------------------------------|---------|------------|------------|---------|---------|-------------|
+| file_extension | string | required | The file extension of the file being downloaded. | pdf                            |         |            |            |         |         |             |
+| link_text      | string | required | The full text of the link.                       | click here                     |         |            |            |         |         |             |
+| link_url       | string | required | The full URL of the link.                        | https://www.example.com/form   |         |            |            |         |         |             |
