@@ -1,6 +1,6 @@
 ## Element Click
 
- Fire when a user engages with a field in a form.
+When a user clicks a element, other than defined oval buttons with a specific call-to-action, such as a radio or checkbox object.
 
 ```js
 
