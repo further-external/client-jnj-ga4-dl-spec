@@ -1,6 +1,6 @@
 # Nav Click
 
-Send when a user clicks on navigation elements (such as Top Nav or Footer)
+Send when a user clicks on navigation elements (such as Top Nav or Footer).
 
 ## Javascript Code
 
