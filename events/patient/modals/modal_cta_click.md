@@ -12,7 +12,7 @@ Send when users engage with a call to action within a modal prompting them to co
 window.globalDataLayer = window.globalDataLayer || [];
 globalDataLayer.push({ event_data: null });  // Clear the previous event_data object.
 globalDataLayer.push({
-  event: 'modal_close',
+  event: 'modal_cta_click',
   event_data: {
     modal_name: "<modal_name>", // REQUIRED | string | ex. "Contact US"
     step_name: "<step_name>", // REQUIRED | string | ex. "Support Personalization"
